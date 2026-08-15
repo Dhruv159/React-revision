@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EmployeeCard = ({ employee, index ,onDeleteEmployee }) => {
+const EmployeeCard = ({ employee, index , onDeleteEmployee }) => {
     return (
         <div className="employee-card">
 

@@ -6,6 +6,8 @@ import EmployeeForm from './components/EmployeeForm';
 
 const App = () => {
 
+	const [showForm, setShowForm] = useState(false);
+
 	const [employees, setEmployees] = useState([
 		{
 			id: 1,
@@ -29,7 +31,7 @@ const App = () => {
 			department: 'HR'
 		}
 	]);
-  	
+
 	const addEmployee = (employee) => {
 		setEmployees(prev => [
 			...prev,
@@ -42,8 +44,6 @@ const App = () => {
 			prev.filter((_, i) => i !== employeeId)
 		);
     }
-
-	const [showForm, setShowForm] = useState(false);
 
 	return (
 		<div className="app">
