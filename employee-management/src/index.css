@@ -1,0 +1,341 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6f8;
+  color: #222;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  background: white;
+  padding: 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.header p {
+  color: #777;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.toolbar {
+  margin-bottom: 25px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.primary-btn {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.employee-section {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.section-header {
+  padding: 18px 20px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.employee-count {
+  background: #eee;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.employee-list {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.employee-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.employee-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.employee-name {
+  font-weight: bold;
+}
+
+.employee-email {
+  color: #777;
+  font-size: 14px;
+}
+
+.employee-role {
+  font-size: 13px;
+  color: #555;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.secondary-btn,
+.delete-btn {
+  border: 1px solid #ccc;
+  background: white;
+  padding: 7px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  color: #d22;
+}
+
+.form-container {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+}
+
+
+
+/* =========================
+   Employee Card
+========================= */
+
+.employee-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+}
+
+.employee-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.employee-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.employee-email {
+  color: #777;
+  font-size: 14px;
+}
+
+.employee-role {
+  color: #555;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.secondary-btn,
+.delete-btn {
+  border: 1px solid #ccc;
+  background: white;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  color: #d22;
+}
+
+.secondary-btn:hover,
+.delete-btn:hover {
+  background: #f5f5f5;
+}
+
+
+/* =========================
+   Modal
+========================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.modal {
+  width: 500px;
+  max-width: calc(100% - 40px);
+
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 25px;
+}
+
+.modal-header h2 {
+  margin-bottom: 5px;
+}
+
+.modal-header p {
+  color: #777;
+  font-size: 14px;
+}
+
+.close-btn {
+  border: none;
+  background: transparent;
+
+  font-size: 25px;
+  cursor: pointer;
+
+  color: #555;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+
+/* =========================
+   Form
+========================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+
+  padding: 11px 12px;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #555;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
